@@ -1,0 +1,11 @@
+C:\Projetos\webServiceNet\bin\Debug\netcoreapp2.0\webServiceNet.deps.json
+C:\Projetos\webServiceNet\bin\Debug\netcoreapp2.0\webServiceNet.runtimeconfig.json
+C:\Projetos\webServiceNet\bin\Debug\netcoreapp2.0\webServiceNet.runtimeconfig.dev.json
+C:\Projetos\webServiceNet\bin\Debug\netcoreapp2.0\webServiceNet.dll
+C:\Projetos\webServiceNet\bin\Debug\netcoreapp2.0\webServiceNet.pdb
+C:\Projetos\webServiceNet\obj\Debug\netcoreapp2.0\webServiceNet.csprojAssemblyReference.cache
+C:\Projetos\webServiceNet\obj\Debug\netcoreapp2.0\webServiceNet.csproj.CoreCompileInputs.cache
+C:\Projetos\webServiceNet\obj\Debug\netcoreapp2.0\webServiceNet.AssemblyInfoInputs.cache
+C:\Projetos\webServiceNet\obj\Debug\netcoreapp2.0\webServiceNet.AssemblyInfo.cs
+C:\Projetos\webServiceNet\obj\Debug\netcoreapp2.0\webServiceNet.dll
+C:\Projetos\webServiceNet\obj\Debug\netcoreapp2.0\webServiceNet.pdb
