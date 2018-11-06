@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using webServiceNet.Models;
 using webServiceNet.Repository;
@@ -7,6 +8,7 @@ using webServiceNet.Repository;
 namespace webServiceNet.Controllers
 {
     [Route("api/[Controller]")]
+    [Authorize()]
     public class CervejaController : Controller
     {
         private readonly ICervejaRepository _cervejaRepository;
