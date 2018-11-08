@@ -1,12 +1,17 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using webServiceNet.Models;
 using webServiceNet.Repository;
 
 namespace webServiceNet.Controllers
 {
+    //Remover comentario "DisableCors" caso tenha problema com CORS rodando o projeto
+    //no localhots
+    
+    //[DisableCors]
     [Route("api/[Controller]")]
     [Authorize()]
     public class CervejaController : Controller
@@ -58,9 +63,11 @@ namespace webServiceNet.Controllers
             {
                 return NotFound();
             }
+            cerv.Nome = cerveja.Nome;
             cerv.Marca = cerveja.Marca;
             cerv.Tipo = cerveja.Tipo;
             cerv.Codigo = cerveja.Codigo;
+            cerv.Url = cerveja.Url;
 
             _cervejaRepository.Update(cerv);
             return new NoContentResult();

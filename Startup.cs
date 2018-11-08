@@ -26,12 +26,21 @@ namespace webServiceNet
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // Remover comentario abaixo caso realize configuracao para acessar um banco de 
+            //dados externo. E adicionar no arquivo "appsettings.json" na chave "DefaultConnection"
+            // a url do seu banco.
+
             // services.AddDbContext<CervejaDbContext>(options => 
             // options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            //Foi utilizado salvar os dados em memoria
+            //Caso utilize um banco externo, comente a linha abaixo.
             services.AddDbContext<CervejaDbContext>(opt => opt.UseInMemoryDatabase("WEBAPI"));
+            
+            
             services.AddTransient<ICervejaRepository, CervejaRepository>();
 
             //especifica o esquema usado para autenticacao do tipo Bearer e
@@ -67,7 +76,6 @@ namespace webServiceNet
             services.AddMvc();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -77,7 +85,6 @@ namespace webServiceNet
 
             //habilita o uso da autenticacao
             app.UseAuthentication();
-
             app.UseMvc();
         }
     }

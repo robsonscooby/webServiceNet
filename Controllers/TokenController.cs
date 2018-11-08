@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -10,6 +11,10 @@ using webServiceNet.Models;
 
 namespace webServiceNet.Controllers
 {
+    //Remover comentario "DisableCors" caso tenha problema com CORS rodando o projeto
+    //no localhots
+    
+    //[DisableCors]
     [Route("api/[Controller]")]
     public class TokenController : Controller
     {
